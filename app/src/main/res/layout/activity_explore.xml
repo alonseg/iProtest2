@@ -21,6 +21,7 @@
             <SearchView
                 android:id="@+id/searchTopic"
                 android:paddingLeft="@dimen/activity_horizontal_margin"
+                style="@style/Base.V11.Theme.AppCompat.Light.Dialog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toLeftOf="@+id/btnQR"

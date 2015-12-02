@@ -20,6 +20,7 @@ import com.alonseg.iprotest.Consts;
 import com.alonseg.iprotest.Objects.MyBaseObject;
 import com.alonseg.iprotest.Objects.Post;
 import com.alonseg.iprotest.R;
+import com.alonseg.iprotest.adapters.MyBaseAdapter;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -37,6 +38,7 @@ public class SinglePostDialog extends Activity{
     public ImageView img;
     public ImageButton shareWhatsapp;
     public ImageButton shareAll;
+    public ImageButton reportBtn;
     public Post post;
 
     public Context con;
@@ -69,6 +71,18 @@ public class SinglePostDialog extends Activity{
 
         handleShare();
 
+        handleReportBtn();
+
+
+    }
+
+    private void handleReportBtn() {
+        reportBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MyBaseAdapter.handleReport(post.getItemId(), con);
+            }
+        });
     }
 
     private void handleTitle() {
@@ -152,6 +166,7 @@ public class SinglePostDialog extends Activity{
         img = (ImageView) findViewById(R.id.singlePostImage);
         shareWhatsapp = (ImageButton) findViewById(R.id.btnWhatsappPost);
         shareAll = (ImageButton) findViewById(R.id.btnSharePost);
+        reportBtn = (ImageButton) findViewById(R.id.btnReportPost);
     }
 
 

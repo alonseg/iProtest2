@@ -64,6 +64,7 @@
         </activity>
         <activity
             android:name=".Activities.ExploreActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
             android:label="Explore">
             <meta-data
                 android:name="android.app.default_searchable"

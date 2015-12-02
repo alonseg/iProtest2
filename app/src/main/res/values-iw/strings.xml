@@ -34,6 +34,7 @@
     <string name="title_activity_add_location">Map</string>
     <string name="log_out">התנתק</string>
 
+    <string name="protest_no_posts">לידיעתך,\nאף אחד לא יראה את המחאה כל עוד אין בה אף פוסט</string>
 
     <string name="news">חדשות</string>
     <string name="photos">תמונות</string>

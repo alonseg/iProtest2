@@ -179,7 +179,7 @@ public class MyBaseAdapter extends ArrayAdapter<MyBaseObject>{
         });
     }
 
-    private static void handleReport(final String reportedID, final Context con) {
+    public static void handleReport(final String reportedID, final Context con) {
         LayoutInflater li = LayoutInflater.from(con);
         View promptsView = li.inflate(R.layout.report_prompt, null);
 

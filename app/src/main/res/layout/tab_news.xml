@@ -98,6 +98,17 @@
             android:divider="@color/appBackground"
             android:dividerHeight="@dimen/lists_divider"/>
 
+        <TextView
+            android:id="@+id/noPostsMsg"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:text="@string/protest_no_posts"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
         <ProgressBar
             android:id="@+id/progress"
             android:layout_centerVertical="true"

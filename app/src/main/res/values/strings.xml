@@ -37,6 +37,7 @@
     <string name="title_activity_add_location">Map</string>
     <string name="log_out">log out</string>
 
+    <string name="protest_no_posts">F.Y.I,\nno one will see this protests as long as there are no posts</string>
 
     <string name="news">News</string>
     <string name="photos">Photos</string>

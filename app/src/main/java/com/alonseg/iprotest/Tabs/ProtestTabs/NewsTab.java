@@ -14,6 +14,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
@@ -26,6 +27,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.alonseg.iprotest.Activities.ProtestActivity;
 import com.alonseg.iprotest.Activities.addLocation;
@@ -46,7 +49,9 @@ import com.parse.SaveCallback;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 
 public class NewsTab extends BaseProtestTab implements FragmentInterface {
 
@@ -64,6 +69,8 @@ public class NewsTab extends BaseProtestTab implements FragmentInterface {
     public ImageButton photoBtn;
     public ImageButton locationBtn;
     public ImageButton doneBtn;
+
+    private TextView noPostsMsg;
 
     public ImageView newPostImage;
 
@@ -128,6 +135,9 @@ public class NewsTab extends BaseProtestTab implements FragmentInterface {
         protestToManage = (Button) v.findViewById(R.id.protestToManage);
         protestPostsListView = (ListView) v.findViewById(R.id.protestPostsList);
         newPostLayout = (RelativeLayout) v.findViewById(R.id.newPostLayout);
+        noPostsMsg = (TextView) v.findViewById(R.id.noPostsMsg);
+        noPostsMsg.setTypeface(Consts.appFont);
+
     }
 
     private void handlePostList(final View v) {
@@ -141,9 +151,14 @@ public class NewsTab extends BaseProtestTab implements FragmentInterface {
         query.getInBackground(ProtestActivity.getId(), new GetCallback<ParseObject>() {
             @Override
             public void done(ParseObject parseObject, ParseException e) {
-                postsListArr = Post.convertListObj(parseObject.getList(Consts.P_POSTS_LIST));
+                List<Object> l = parseObject.getList(Consts.P_POSTS_LIST);
+                if (l == null || l.size() < 1){
+                    noPostsMsg.setVisibility(View.VISIBLE);
+                }
+                postsListArr = Post.convertListObj(l);
                 postAdapter = new PostAdapter(con, R.layout.row_post, postsListArr);
                 protestPostsListView.setAdapter(postAdapter);
+
                 v.findViewById(R.id.progress).setVisibility(View.GONE);
             }
         });
@@ -192,12 +207,7 @@ public class NewsTab extends BaseProtestTab implements FragmentInterface {
                 newPostLayout.setVisibility(View.GONE);
 
                 ParseQuery<ParseObject> query = ParseQuery.getQuery(Consts.PROTEST);
-                final ParseObject postParseObj = new ParseObject(Consts.POST);
-                postParseObj.put(Consts.POST_TEXT, text);
-                postParseObj.put(Consts.P_NAME, ProtestActivity.getName());
-                postParseObj.put(Consts.P_ID, ProtestActivity.getId());
-                postParseObj.put(Consts.POST_CREATED_BY, app.getUsername());
-                postParseObj.put(Consts.LOCAL ,  getUserCountry(con));
+                final ParseObject postParseObj = initNewParsePost(text);
 
                 // Retrieve the object by id
                 query.getInBackground(ProtestActivity.getId(), new GetCallback<ParseObject>() {
@@ -251,7 +261,7 @@ public class NewsTab extends BaseProtestTab implements FragmentInterface {
                                                                     postObj.setThumb(bytes.toByteArray());
                                                                     postAdapter.addItem(postObj);
                                                                     postAdapter.notifyDataSetChanged();
-
+                                                                    noPostsMsg.setVisibility(View.GONE);
                                                                     page.findViewById(R.id.progress).setVisibility(View.GONE);
                                                                 }
                                                             }
@@ -271,6 +281,10 @@ public class NewsTab extends BaseProtestTab implements FragmentInterface {
                                             postAdapter.addItem(postObj);
                                             postAdapter.notifyDataSetChanged();
                                             page.findViewById(R.id.progress).setVisibility(View.GONE);
+                                            noPostsMsg.setVisibility(View.GONE);
+                                        } else {
+                                            Toast.makeText(con,"Something went wrong, please try again later", Toast.LENGTH_SHORT).show();
+                                            page.findViewById(R.id.progress).setVisibility(View.GONE);
                                         }
                                     }
                                 });
@@ -280,6 +294,17 @@ public class NewsTab extends BaseProtestTab implements FragmentInterface {
                 });
             }
         });
+    }
+
+    @NonNull
+    private ParseObject initNewParsePost(String text) {
+        final ParseObject postParseObj = new ParseObject(Consts.POST);
+        postParseObj.put(Consts.POST_TEXT, text);
+        postParseObj.put(Consts.P_NAME, ProtestActivity.getName());
+        postParseObj.put(Consts.P_ID, ProtestActivity.getId());
+        postParseObj.put(Consts.POST_CREATED_BY, app.getUsername());
+        postParseObj.put(Consts.LOCAL ,  getUserCountry(con));
+        return postParseObj;
     }
 
     protected void checkAndSwitchIfFollow() {

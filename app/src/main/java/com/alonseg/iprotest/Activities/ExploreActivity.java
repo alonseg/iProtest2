@@ -51,7 +51,6 @@ public class ExploreActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_explore);
         LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
-        final View v =inflater.inflate(R.layout.activity_explore, null);
         cont = this;
 
         initViews();

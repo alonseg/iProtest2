@@ -138,14 +138,19 @@ public class ManageActivity extends FragmentActivity {
                             installation.saveInBackground(new SaveCallback() {
                                 @Override
                                 public void done(ParseException e) {
-                                    if (e == null)
+                                    if (e == null) {
                                         Log.d(TAG, "added protest to push list");
-                                    else
+
+
+                                    } else
                                         Log.d(TAG, "failed to add protest to push list");
                                 }
                             });
-                            startManageContent();
-                            switchManagePage();
+                            Intent intent = new Intent(con, ProtestActivity.class);
+                            intent.putExtra(Consts.P_ID, newProtest.getObjectId());
+                            con.startActivity(intent);
+//                            startManageContent();
+//                            switchManagePage();
                         } else {
                             Log.v("SAVE_ERR", e.toString() + e.getCode());
                             if (e.getMessage().equals("DUPLICATE")) {
