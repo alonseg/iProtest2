@@ -1,0 +1,199 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/appBackground">
+
+    <RelativeLayout
+        android:id="@+id/managePage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/navBottom">
+
+        <RelativeLayout
+            android:id="@+id/managePageTtl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/topTitle">
+            <TextView
+                android:id="@+id/manageTtl"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/manage_title"
+                android:textSize="30dp"/>
+
+            <ImageButton
+                android:id="@+id/manageNewProtestBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingRight="7dp"
+                android:src="@drawable/ic_add_black_36dp"
+                android:background="@android:color/transparent"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/managePageBody"
+            android:layout_below="@+id/managePageTtl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/manageNoProtests"
+                android:layout_centerHorizontal="true"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:text="@string/manage_no_protests"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ListView
+                android:id="@+id/manageListProtests"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/manageNoProtests"
+                android:paddingLeft="@dimen/lists_side_padding"
+                android:paddingRight="@dimen/lists_side_padding"
+                android:paddingTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/appBackground"
+                android:dividerHeight="@dimen/lists_divider" />
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true" />
+
+            <TextView
+                android:id="@+id/manageNotLoggedText"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:textColor="@color/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:id="@+id/manageLogReg"
+                android:text="@string/log_or_reg"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/manageNoProtests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/managePageNewProtestLayout"
+            android:layout_below="@id/managePageTtl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:visibility="gone">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:id="@+id/addProtestTtl"
+                        android:gravity="center"
+                        android:textColor="@color/description"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="30dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/title_add_protest"/>
+
+                    <EditText
+                        android:id="@+id/enterProtestTitle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/enter_protest_name"
+                        android:layout_below="@+id/addProtestTtl"/>
+
+                    <EditText
+                        android:id="@+id/enterProtestDescription"
+                        android:lines="5"
+                        android:inputType="textMultiLine"
+                        android:gravity="top"
+                        android:maxLines="30"
+                        android:scrollbars="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/enter_protest_description"
+                        android:layout_below="@+id/enterProtestTitle"/>
+
+                    <Button
+                        android:id="@+id/enterDone"
+                        android:textSize="20dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/enter_done"
+                        android:layout_below="@+id/enterProtestDescription"/>
+
+                </RelativeLayout>
+
+            </ScrollView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/navBottom"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/bottomBar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageButton
+            android:id="@+id/btnManage"
+            android:layout_width="55dp"
+            android:layout_height="fill_parent"
+            android:background="@android:color/transparent"
+            android:src="@drawable/manage_white"
+            android:layout_marginLeft="52dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:id="@+id/btnFollow"
+            android:layout_width="55dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/clenched"
+            android:background="@android:color/transparent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:id="@+id/btnExplore"
+            android:layout_width="55dp"
+            android:layout_height="fill_parent"
+            android:background="@android:color/transparent"
+            android:src="@drawable/compass"
+            android:layout_marginRight="52dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

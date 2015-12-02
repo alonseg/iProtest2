@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">iProtest</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="searchHint">Looking for a protest?</string>
+    <string name="follow_title">Following</string>
+    <string name="manage_title">Manage Protests</string>
+    <string name="delete_btn">Delete</string>
+    <string name="title_activity_oh_uh_dialog">UH - OH...</string>
+    <string name="reg_btn">Register</string>
+    <string name="log_btn">Login</string>
+    <string name="log_or_reg">Login or Register</string>
+    <string name="asked_to_reg_log">If you want to Login - go ahead!\nIf you want to register - even better!\n</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_protest">ProtestActivity</string>
+    <string name="title_add_protest">Start the next big thing!</string>
+    <string name="enter_protest_name">Protest Name</string>
+    <string name="enter_protest_description">Protest Description</string>
+    <string name="enter_invite">Invite Friends</string>
+    <string name="enter_done">Done!</string>
+    <string name="manage_no_protests">Ummm...\n\nYou don\'t manage any Protests [:(]\n\nFeel free
+        to start one! [:P]\nJust press the \"+\" sign!</string>
+    <string name="new_post_hint">Share a Post, Photo, Location</string>
+    <string name="join_this_cause">Join This Cause!</string>
+    <string name="report_ttl">What\'s wrong here? [:^(]</string>
+    <string name="i_protest_url">iProtest</string>
+    <string name="reg_but_empty_following">You Are Logged &amp; Registered! [:}]\n\nBut aren\'t
+        following any Protests [:{]\nGo to the \'Explore\' page to find some,\nOr start one in the
+        \'Manage\' page!</string>
+
+
+    <string name="parse_app_id">UOu89QKEFy3KapBdIxjsRYyvF1ufh4BAtHpe1Kck</string>
+    <string name="parse_client_key">sulyIALglZ1ey6GSy8DpCbegQQUY6NRWseeNCGKV</string>
+    <string name="menu_search">search menu</string>
+    <string name="title_activity_add_location">Map</string>
+    <string name="log_out">log out</string>
+
+
+    <string name="news">News</string>
+    <string name="photos">Photos</string>
+    <string name="about">About</string>
+    <string name="next">What\'s Next?</string>
+
+
+</resources>

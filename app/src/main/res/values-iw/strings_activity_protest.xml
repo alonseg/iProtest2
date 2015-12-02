@@ -1,0 +1,10 @@
+<resources>
+
+    <!-- Strings related to login -->
+    <string name="claim_ownership">דרוש את הניהול</string>
+    <string name="unfollow">הפסק לעקוב [8-(]</string>
+    <string name="delete_protest"> מחק את המחאה[:O]</string>
+    <string name="nextStepsStr">עדכן את העוקבים!</string>
+    <string name="nextStepsSendPush">לשלוח נוטיפיקציה על העדכון?</string>
+
+</resources>

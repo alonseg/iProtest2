@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/appBackground">
+
+    <TextView
+        android:id="@+id/singlePostTitle"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/titles"
+        android:textSize="35dp"
+        />
+
+    <TextView
+        android:id="@+id/singlePostBody"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:layout_below="@+id/singlePostTitle"/>
+
+    <ImageView
+        android:id="@+id/singlePostImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:layout_below="@+id/singlePostBody"/>
+
+    <LinearLayout
+        android:id="@+id/singlePostButton"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/appBackground"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageButton
+            android:id="@+id/btnReportPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_report_black_36dp"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/btnWhatsappPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/share_whatsapp"
+            android:layout_toRightOf="@+id/btnFbLikePost"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/btnSharePost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_share_black_36dp"
+            android:layout_toRightOf="@+id/btnWhatsappPost"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</RelativeLayout>

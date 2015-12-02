@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="topTitle">#FFFFF0</color>
+    <color name="listExplore">#1DE9B6</color>
+    <color name="postColor">#FAFAFA</color>
+    <color name="offWhite">#E6E6E6</color>
+    <color name="appBackground">#EEEEEE</color>
+    <color name="bottomBar">#B5B5B5</color>
+    <color name="listDivider">#AAAAAA</color>
+    <color name="borderLines">#333216</color>
+    <color name="titles">#000000</color>
+    <color name="description">#16150b</color>
+    <color name="nameAndDate">#16150b</color>
+</resources>

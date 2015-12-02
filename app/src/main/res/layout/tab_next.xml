@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/newNextStep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/postColor"
+            android:padding="@dimen/padding_rows"
+            android:elevation="@dimen/elevation_rows"
+            android:translationZ="@dimen/transition_rows"
+            android:visibility="gone">
+
+
+            <EditText
+                android:id="@+id/nextEditText"
+                android:hint="@string/nextStepsStr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/nextCheckBox"
+                android:layout_below="@+id/nextEditText"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_below="@id/nextEditText"
+                android:layout_toRightOf="@id/nextCheckBox"
+                android:layout_alignBaseline="@+id/nextCheckBox"
+                android:text="@string/nextStepsSendPush"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:id="@+id/nextDone"
+                android:layout_below="@+id/nextEditText"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_done_black_36dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:paddingTop="10dp"
+            android:id="@+id/joinBtnLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newNextStep">
+
+            <Button
+                android:id="@+id/joinThisCause"
+                android:text="@string/join_this_cause"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+        <ListView
+            android:id="@+id/nextListView"
+            android:layout_below="@+id/joinBtnLayout"
+            android:paddingLeft="@dimen/lists_side_padding"
+            android:paddingRight="@dimen/lists_side_padding"
+            android:paddingTop="7dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/appBackground"
+            android:dividerHeight="@dimen/lists_divider"/>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true" />
+
+
+</RelativeLayout>

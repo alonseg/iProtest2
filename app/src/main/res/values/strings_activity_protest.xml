@@ -1,0 +1,10 @@
+<resources>
+
+    <!-- Strings related to login -->
+    <string name="claim_ownership">Claim Ownership!</string>
+    <string name="unfollow">Unfollow [8-(]</string>
+    <string name="delete_protest">Delete Protest [:O]</string>
+    <string name="nextStepsStr">Update the followers!</string>
+    <string name="nextStepsSendPush">Send update notification?</string>
+
+</resources>

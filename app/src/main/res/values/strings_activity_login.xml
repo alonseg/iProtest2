@@ -1,0 +1,26 @@
+<resources>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_verify_password">Verify password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_register">Register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="plus_sign_out">Switch Google+ account</string>
+    <string name="plus_disconnect">Disconnect from Google+</string>
+    <string name="unregistered_follow">Looking for the Protests you follow [:(]?\nRegister or login
+        [:)]\nOr head over to the Explore page unregistered [;)]</string>
+    <string name="unregistered_manage">Want to manage Protests [>:(]?\n\nRegister or login
+        [:)]\nOr head over to the Explore page unregistered [;)]</string>
+    <string name="unregistered_new_protest">Want to Start a Protest [>:(]?\nRegister or login
+        [:)]\nOr head over to the Explore page unregistered [;)]</string>
+    <string name="unregistered_msg_part_1">Seems that you\'ve tried to </string>
+    <string name="unregistered_msg_part_2">perform an action </string>
+    <string name="unregistered_msg_part_3">[:)], \nBut you are not yet registered [:(].\nUse one of
+        the followings
+        to register, or keep on wondering about unregistered</string>
+
+</resources>

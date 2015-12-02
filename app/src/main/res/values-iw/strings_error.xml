@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_invalid_email">שם משתמש זה אינו חוקי</string>
+    <string name="error_invalid_password">הסיסמא קצרה מידי</string>
+    <string name="error_incorrect_password">הסיסמא איננה נכונה</string>
+    <string name="error_field_required">שדה זה נחוץ</string>
+    <string name="error_letter_num">צריך להתחיל באות או מספר...</string>
+    <string name="error_protest_name_taken"> שם המחאה הזה תפוס [:(]</string>
+
+</resources>

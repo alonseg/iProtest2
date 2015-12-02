@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">iProtest</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="searchHint">מחפשים מחאה?</string>
+    <string name="follow_title">מחאות למעקב</string>
+    <string name="manage_title">ניהול מחאות</string>
+    <string name="delete_btn">מחק</string>
+    <string name="title_activity_oh_uh_dialog">הו לא!</string>
+    <string name="reg_btn">הרשמה</string>
+    <string name="log_btn">התחברות</string>
+    <string name="log_or_reg">הרשמה או התחברות</string>
+    <string name="asked_to_reg_log">רוצה להתחבר? מצויין!\nרוצה להרשם? אפילו יותר טוב!</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_protest">ProtestActivity</string>
+    <string name="title_add_protest">התחילו את הדבר הגדול הבא!</string>
+    <string name="enter_protest_name">שם המחאה</string>
+    <string name="enter_protest_description">תיאור המחאה</string>
+    <string name="enter_invite">הזמינו חברים</string>
+    <string name="enter_done">סיימתי!</string>
+    <string name="manage_no_protests">אמממ...\n\nאתה לא מנהל אף מחאה [:(]\n\nתרגיש חופשי להתחיל אחת! [:)]\nפשוט תלחץ על סימן ה\"+\"</string>
+    <string name="new_post_hint">שתפו פוסט, תמונה או מיקום</string>
+    <string name="join_this_cause">צרפו אותי למחאה!</string>
+    <string name="report_ttl">What\'s wrong here? [:^(]</string>
+    <string name="i_protest_url">iProtest</string>
+    <string name="reg_but_empty_following">את רשומה ומחוברת! [:}]\n\nאבל את לא עוקבת אחרי אף מחאה [:{]\nגשי לדף ה\'חיפוש\' למצוא מחאות\nאו התחילי אחת בדף ה\'ניהול\'</string>
+
+
+    <string name="parse_app_id">UOu89QKEFy3KapBdIxjsRYyvF1ufh4BAtHpe1Kck</string>
+    <string name="parse_client_key">sulyIALglZ1ey6GSy8DpCbegQQUY6NRWseeNCGKV</string>
+    <string name="menu_search">search menu</string>
+    <string name="title_activity_add_location">Map</string>
+    <string name="log_out">התנתק</string>
+
+
+    <string name="news">חדשות</string>
+    <string name="photos">תמונות</string>
+    <string name="about">אודות</string>
+    <string name="next">שלבי המשך</string>
+
+
+
+
+</resources>

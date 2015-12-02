@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rowPostRelView"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/post_shape"
+    android:padding="@dimen/padding_rows"
+    android:elevation="@dimen/elevation_rows"
+    android:translationZ="@dimen/transition_rows">
+
+    <TextView
+        android:id="@+id/postRowNameAndDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:textColor="@color/nameAndDate"/>
+    <TextView
+        android:id="@+id/postSum"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/postRowNameAndDate"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textColor="@color/description"/>
+
+    <ImageView
+        android:id="@+id/postImg"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/postSum"
+        android:layout_height="120dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop" />
+    <ImageButton
+        android:id="@+id/postRowOption"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="5dp"
+        android:src="@drawable/ic_arrow_drop_down_circle_black_24dp"
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

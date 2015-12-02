@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/appBackground">
+
+    <RelativeLayout
+        android:id="@+id/followPage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/navBottom">
+
+        <RelativeLayout
+            android:id="@+id/followPageTtl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/topTitle">
+            <TextView
+                android:id="@+id/followingTtl"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/follow_title"
+                android:textSize="30dp"/>
+            <Button
+                android:id="@+id/logOut"
+                android:text="@string/log_out"
+                android:textSize="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_alignParentRight="true"/>
+
+
+        </RelativeLayout>
+
+
+        <ListView
+            android:id="@+id/followListPosts"
+            android:paddingLeft="@dimen/lists_side_padding"
+            android:paddingRight="@dimen/lists_side_padding"
+            android:layout_below="@id/followPageTtl"
+            android:paddingTop="7dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/appBackground"
+            android:dividerHeight="@dimen/lists_divider"/>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+
+        <TextView
+            android:id="@+id/followEmptyText"
+            android:gravity="center"
+            android:textColor="@color/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/followLogReg"
+            android:text="@string/log_or_reg"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/navBottom"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/bottomBar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageButton
+            android:id="@+id/btnManage"
+            android:layout_width="55dp"
+            android:layout_height="fill_parent"
+            android:background="@android:color/transparent"
+            android:src="@drawable/manage"
+            android:layout_marginLeft="52dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:id="@+id/btnFollow"
+            android:layout_width="55dp"
+            android:layout_height="fill_parent"
+            android:background="@android:color/transparent"
+            android:src="@drawable/clenched_white"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:id="@+id/btnExplore"
+            android:layout_width="55dp"
+            android:layout_height="fill_parent"
+            android:background="@android:color/transparent"
+            android:src="@drawable/compass"
+            android:layout_marginRight="52dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/mapBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="map"/>
+
+</RelativeLayout>

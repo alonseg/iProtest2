@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Strings related to registration -->
+    <string name="register_username">שם המוחה</string>
+    <string name="register_title">מצטרף חדש!</string>
+    <string name="register_success">ווהו!\nהצלחת להרשם ל iProtest! [8^)].\nהתחילי לעקוב ולנהל מחאות!</string>
+    <string name="register_success_title">מזל טוב!\n</string>
+    <string name="register_text">אתה בשלבך הראשון להפיכה למוחה מועיל! [:)].\nמלא את המידע שכאן כדי להרשם</string>
+</resources>

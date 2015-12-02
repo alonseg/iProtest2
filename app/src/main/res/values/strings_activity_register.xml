@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Strings related to registration -->
+    <string name="register_username">Protester name</string>
+    <string name="register_title">New Recruit!</string>
+    <string name="register_success">Congratulations!\nYou are now registered to iProtest! [8^)].\nGo ahead following and managing your protests! </string>
+    <string name="register_success_title">Congratulations!\n</string>
+    <string name="register_text">You are on your first step on becoming a helpful protester [:)].\nFill the information below to register</string>
+</resources>

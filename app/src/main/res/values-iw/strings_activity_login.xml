@@ -1,0 +1,21 @@
+<resources>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">אי-מייל</string>
+    <string name="prompt_username">שם משתמש</string>
+    <string name="prompt_password">סיסמא</string>
+    <string name="prompt_verify_password">אימות סיסמא</string>
+    <string name="action_sign_in">התחברות</string>
+    <string name="action_register">הרשמה</string>
+    <string name="action_sign_in_short">התחברות</string>
+    <string name="plus_sign_out">Switch Google+ account</string>
+    <string name="plus_disconnect">Disconnect from Google+</string>
+    <string name="unregistered_follow">מחפש את המחאות שאתה עוקב אחריהן? [:(]\nהרשם או התחבר [:)]\nאו שתיגש לדף ה\'חיפוש\' ללא רישום! [;)]</string>
+    <string name="unregistered_manage">רוצים לנהל מחאות? [>:(]\nהרשמו או התחברו [:)]\nאו שתיגשו לדף ה\'חיפוש\' ללא רישום [;)]</string>
+    <string name="unregistered_new_protest">רוצות להתחיל מחאה? [>:ס]\nהרשמו או התחברו [:)]\nאו שתיגשו לדף ה\'חיפוש\' ללא רישום</string>
+    <string name="unregistered_msg_part_1">ניראה שניסית ל</string>
+    <string name="unregistered_msg_part_2">בצע פעולה כלשהי</string>
+    <string name="unregistered_msg_part_3">[:)], \nאבל לא נרשמתם [:(].\nהשתמשו באחד מהבאים על מנת להרשם, או שתמשיכו לשוטט ללא רישום</string>
+
+</resources>

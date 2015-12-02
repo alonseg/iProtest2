@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/stepRelView"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/post_shape"
+    android:padding="@dimen/padding_rows"
+    android:elevation="@dimen/elevation_rows"
+    android:translationZ="@dimen/transition_rows">
+
+    <TextView
+        android:id="@+id/stepNameAndDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textSize="12dp"
+        android:textColor="@color/nameAndDate"/>
+    <TextView
+        android:id="@+id/stepText"
+        android:paddingTop="8dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/postRowNameAndDate"
+        android:textSize="25dp"
+        android:textColor="@color/description"/>
+
+    <ImageButton
+        android:id="@+id/stepRowOptions"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/stepText"
+        android:paddingRight="5dp"
+        android:src="@drawable/ic_arrow_drop_down_circle_black_24dp"
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

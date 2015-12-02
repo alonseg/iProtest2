@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/protestToManage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/joinOrWrite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/joinThisCause"
+                android:text="@string/join_this_cause"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/newPostEditPlaceHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/new_post_hint"
+                android:inputType="textCapSentences|textMultiLine"
+                android:gravity="top|left"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/newPostLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_below="@+id/joinOrWrite">
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/ivImage">
+
+
+                <ImageButton
+                    android:id="@+id/addLocationToPost"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_location_on_black_36dp"/>
+
+                <ImageButton
+                    android:id="@+id/addPhotosToPost"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_photo_camera_black_36dp"/>
+
+                <ImageButton
+                    android:id="@+id/addNewPostDone"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_done_black_36dp"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/protestPostsList"
+            android:layout_below="@+id/joinOrWrite"
+
+            android:paddingLeft="@dimen/lists_side_padding"
+            android:paddingRight="@dimen/lists_side_padding"
+            android:paddingTop="7dp"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/appBackground"
+            android:dividerHeight="@dimen/lists_divider"/>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

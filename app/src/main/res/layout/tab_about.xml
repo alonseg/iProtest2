@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/joinThisCause"
+            android:text="@string/join_this_cause"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/aboutText"
+            android:layout_below="@+id/joinThisCause"
+            android:textSize="30dp"
+            android:padding="7dp"
+            android:textColor="@color/primary_text_default_material_light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                android:id="@+id/claimOrDeleteProtest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/deleteProtest"
+                    android:text="@string/delete_protest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/unfollowBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unfollow"
+                android:layout_toRightOf="@+id/claimOrDeleteProtest"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
